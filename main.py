@@ -190,10 +190,13 @@ def main():
     else:
         print(f"{APP_NAME} {VERSION} [Ollama:{MODEL_NAME}] [Vosk:{VOSK_MODEL_NAME}] [TTS:{VOICE_ID}]")
 
-    # Contextual priming
-    pre_prompt = "Always answer very short, but act like a professional. Start over."
-    conversation_history.append({"role": "user", "content": pre_prompt})
-    conversation_history.append({"role": "assistant", "content": "Alright"})
+    # Context initialization
+    # Adds entries to conversation_history from the config file
+    for entry in config["OLLAMA"]["context-initialization"]:
+        conversation_history.append({
+            "role": entry["role"],
+            "content": entry["content"]
+        })
  
     print("Type '/help' for a list of commands")
     show_help()

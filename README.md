@@ -48,7 +48,17 @@ Before running the application, you'll need to modify or create a `config.json` 
         "temperature": 0.5,
         "seed": 42,
         "typing_delay": 0.007,
-        "address": "http://localhost:11434/api/chat"
+        "address": "http://localhost:11434/api/chat",
+        "context-initialization": [
+            {
+                "role": "user",
+                "content": "Always answer very short, but act like a professional. Start over."
+            },
+            {
+                "role": "assistant",
+                "content": "Alright"
+            }
+        ]
     },
     "VOSK": {
         "path": "models/vosk/",
@@ -59,8 +69,7 @@ Before running the application, you'll need to modify or create a `config.json` 
         "silence_duration": 1.5,
         "samplerate": 44100
     },
-    "VOICE":
-    {
+    "VOICE": {
         "id": "English",
         "rate": 125,
         "volume": 1.0
@@ -68,7 +77,29 @@ Before running the application, you'll need to modify or create a `config.json` 
 }
 ```
 
-2. **Models**
+**OLLAMA**
+- **model_name**: Specify the model you want to use. Ensure the model is available. (e.g., `"model_name": "llama3.2:latest"`)
+- **temperature**: Adjust this value to control the randomness of responses. (0.0 = deterministic, 1.0 = highly random)
+- **seed**: Change this to set the random seed for reproducibility.
+- **typing_delay**: Modify this value to adjust the delay in typing simulation.
+- **address**: Update the API address if your server runs on a different port or IP. (e.g., `"address": "http://127.0.0.1:8000/api/chat"`)
+- **context-initialization**: Customize the initial messages to set the assistant’s behavior and tone.
+
+**VOSK**
+- **path**: Ensure this path points to your VOSK model directory. (e.g., `"path": "models/vosk/"`)
+- **model_name**: Use the name of the VOSK model you want to load. (keep in mind that it should be the folder name inside vosk folder)
+
+**AUDIO_RECORDER**
+- **threshold**: Adjust this value to change the sensitivity of audio detection.
+- **silence_duration**: Set the duration (in seconds) for silence detection.
+- **samplerate**: Change the sample rate for audio recording as required.
+
+**VOICE**
+- **id**: Specify the voice language/identifier. (e.g., `"id": "Spanish"`)
+- **rate**: Adjust the speech rate (words per minute).
+- **volume**: Change the volume level (0.0 to 1.0).
+
+### Models
 Before running the application, you will also need to download the models for Ollama and Vosk.
 For Ollama you can just push into the console `ollama pull llama3.2` and for Vosk you need to go their website.
 Remember to set the `path` for Vosk in the `config.json` file. 

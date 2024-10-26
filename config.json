@@ -8,7 +8,17 @@
         "temperature": 0.5,
         "seed": 42,
         "typing_delay": 0.007,
-        "address": "http://localhost:11434/api/chat"
+        "address": "http://localhost:11434/api/chat",
+        "context-initialization": [
+            {
+                "role": "user",
+                "content": "Always answer very short, but act like a professional. Start over."
+            },
+            {
+                "role": "assistant",
+                "content": "Alright"
+            }
+        ]
     },
     "VOSK": {
         "path": "models/vosk/",
@@ -19,8 +29,7 @@
         "silence_duration": 1.5,
         "samplerate": 44100
     },
-    "VOICE":
-    {
+    "VOICE": {
         "id": "English",
         "rate": 125,
         "volume": 1.0
