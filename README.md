@@ -147,7 +147,7 @@ The application uses several external libraries as mention above:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 **External Licenses:**
 - [Ollama](https://github.com/ollama/ollama/blob/main/LICENSE)
