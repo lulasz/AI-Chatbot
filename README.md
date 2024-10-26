@@ -127,6 +127,24 @@ Remember to set the `path` for Vosk in the `config.json` file.
 
 ## Project Structure
 
+It should look like this to make it work correctly.
+
+```
+Chatbot
+├── models
+│   └── vosk
+│       └── vosk-model-small-en-us-0.15
+├── main.py
+├── config.json
+├── audio_recorder.py
+├── spinner.py
+├── syntax_highlighter.py
+├── text_to_speech.py
+├── transcriber.py
+└── requirements.txt
+
+```
+
 - **main.py**: The main script that runs the chatbot.
 - **config.json**: Configuration file for application settings.
 - **audio_recorder.py**: Handles audio recording and transcribing.
