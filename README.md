@@ -4,6 +4,9 @@ This is a console-based chatbot application that leverages machine learning mode
 
 ## Screenshots
 ![Basic usage](screenshots/screenshot1.png)
+| ![Voice usage](screenshots/screenshot2.png) | ![Code usage](screenshots/screenshot3.png) |
+|-----------------------------------------------|----------------------------------------------|
+
 
 ## Features
 
