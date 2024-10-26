@@ -1,0 +1,28 @@
+{
+    "APP": {
+        "name": "AI Chatbot",
+        "version": 1.0
+    },
+    "OLLAMA": {
+        "model_name": "llama3.2:latest",
+        "temperature": 0.5,
+        "seed": 42,
+        "typing_delay": 0.007,
+        "address": "http://localhost:11434/api/chat"
+    },
+    "VOSK": {
+        "path": "models/vosk/",
+        "model_name": "vosk-model-small-en-us-0.15"
+    },
+    "AUDIO_RECORDER": {
+        "threshold": 0.05,
+        "silence_duration": 1.5,
+        "samplerate": 44100
+    },
+    "VOICE":
+    {
+        "id": "English",
+        "rate": 125,
+        "volume": 1.0
+    }
+}
